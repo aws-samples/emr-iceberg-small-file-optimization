@@ -4,7 +4,7 @@ Apache Iceberg tables store metadata of the data in manifest files. As the numbe
 
 To compact the small files for improved performance, in this example, Amazon EMR will trigger a compaction job after the write commit as a post commit hook when defined thresholds (e.g. number of commits) are met. By default, Amazon EMR will wait for 10 commits to trigger the post-commit hook compaction utility.
 
-In this example notebook we are going to show you how the Compaction utility can be used and what performance benefits you can achieve by using this utility. We will be using an EMR Notebook for demonstrating the benefits of the compaction utility. To check how to setup an EMR Notbook, please refer to our AWS documentations. ![image](https://github.com/aws-samples/emr-iceberg-small-file-optimization/assets/38989589/4c904ef9-4e22-4204-b462-47a618a35480)
+In this example notebook we are going to show you how the Compaction utility can be used and what performance benefits you can achieve by using this utility. We will be using an EMR Notebook for demonstrating the benefits of the compaction utility. To check how to setup an EMR Notbook, please refer to our AWS documentations. https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-notebooks.html
 
 ## Prerequisite
 For running the Amazon EMR tests in this example, You have to use Amazon EMR version emr-6.11.0 or higher with Spark 3.3.2, and JupyterEnterpriseGateway 2.6.0. The cluster we used was having 1 Primary Node (r5.2xlarge) and 2 Core Nodes(r5.xlarge). We used a bootstrap action during cluster creation to enable event-based table management as below.
