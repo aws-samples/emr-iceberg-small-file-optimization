@@ -7,12 +7,12 @@ To compact the small files for improved performance, in this example, Amazon EMR
 In this example notebook we are going to show you how the Compaction utility can be used and what performance benefits you can achieve by using this utility. We will be using an EMR Notebook for demonstrating the benefits of the compaction utility. To check how to setup an EMR Notbook, please refer to our AWS documentations. https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-notebooks.html
 
 ## Prerequisite
-For running the Amazon EMR tests in this example, You have to use Amazon EMR version emr-6.11.0 or higher with Spark 3.3.2, and JupyterEnterpriseGateway 2.6.0. The cluster we used was having 1 Primary Node (r5.2xlarge) and 2 Core Nodes(r5.xlarge). To leverage the feature, customer uses the iceberg-aws-event-based-table-management source code and provide the built jar in the engine’s class-path. The following bootstrap action can place the jar in the engine’s class-path:
+For running the Amazon EMR tests in this example, You have to use Amazon EMR version emr-6.11.0 or higher with Spark 3.3.2, and JupyterEnterpriseGateway 2.6.0. The cluster we used was having 1 Primary Node (r5.2xlarge) and 2 Core Nodes(r5.xlarge). To leverage the feature, customer uses the iceberg-aws-event-based-table-management source code (https://github.com/aws-samples/iceberg-aws-event-based-table-management/tree/main/src/main/java/org/apache/iceberg/aws/manage) and provide the built jar in the engine’s class-path. The following bootstrap action can place the jar in the engine’s class-path:
 
 
 sudo aws s3 cp s3://<path>/iceberg-aws-event-based-table-management-0.1.jar /usr/lib/spark/jars/
 
-Also, you should check our documentation on how to use an Iceberg cluster with Spark which is a prerequisite for this exercise. To leverage the feature, you have to use the iceberg-aws-event-based-table-management source code (https://github.com/aws-samples/iceberg-aws-event-based-table-management/tree/main/src/main/java/org/apache/iceberg/aws/manage) and provide the built jar in the engine’s class-path. 
+Also, you should check our documentation on how to use an Iceberg cluster with Spark which is a prerequisite for this exercise. 
 
 
 ## Security
